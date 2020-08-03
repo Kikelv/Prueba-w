@@ -7,7 +7,7 @@ function Login() {
     return (
         <>
 
-<nav>
+            <nav>
                 <header>
                     <svg width="87" height="28" viewBox="0 0 87 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="14" cy="14" r="14" fill="#5596DF" />
@@ -28,7 +28,6 @@ function Login() {
                 </form>
 
             </div>
-
 
             <Footer />
 

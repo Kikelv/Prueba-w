@@ -23,7 +23,6 @@ function Nav() {
         setBoton2sign('boton2signNoVisible')
         setForm('noVisible')
     }
-
     function cerrar() {
         setStyle('noVisible');
         setStyle2('visible');
