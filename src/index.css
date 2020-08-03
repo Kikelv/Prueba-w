@@ -1,13 +1,415 @@
-body {
+/* ÍNDICE 
+
+RESET 
+General
+Container
+Header
+Nav
+Main menu
+Main
+Articles
+Sections
+Asides
+Footer
+Media queries
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625em;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Heebo', sans-serif;
+  color: black;
+  background-color: white;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+iframe {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline-color: #ccc;
+  outline-offset: 1px;
+  outline-style: dotted;
+  outline-width: thin;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+/*------------------------NAV-----------------------------*/
+
+nav {
+  background-color: rgb(37, 37, 37);
+  position: sticky;
+    top: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.botonMenu {
+  background-color: transparent;
+  border: none;
+}
+
+.fa-bars, .fa-times {
+  color: white;
+  font-size: 2rem;
+}
+
+.desplegable {
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.911);
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.barraSign {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  background-color: white;
+  width: 100%;
+  padding: 3%;
+  color: #1976D2;
+  font-weight: 600;
+  position: relative;
+}
+
+.signBoton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-chevron-down, .fa-chevron-up {
+  color: #1976D2;
+}
+
+.desplegable ul {
+  margin-top: 30%;
+}
+
+.desplegable li {
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 45% 0;
+}
+
+.sign {
+  display: none;
+}
+
+/*----------------------GENERAL--------------------*/
+
+.portada {
+  background-image: url('/img/Imagen_Mobile.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  color: white;
+  padding: 1%;
+  margin: auto;
+}
+
+.textoPortada {
+  width: 66%;
+  padding: 19% 5%;
+}
+
+.textoPortada h1 {
+  font-size: 3rem;
+}
+
+.textoPortada h2 {
+  font-weight: 200;
+  font-size: 2.1rem;
+}
+
+.portada p {
+  text-align: center;
+}
+
+.ourProducts {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.ourProducts i {
+  margin-left: 2%;
+  font-size: 1.5rem;
+}
+
+.ourProducts a {
+  color: white;
+}
+
+/* :visited{
+  color: white;
+} */
+
+/*----------------------CONTAINER------------------------*/
+
+/*----------------------SECTIONS------------------------*/
+
+#products {
+  padding: 10% 0% 0% 6%;
+  
+}
+
+section {
+  padding: 5% 5%;
+}
+
+.ficha1 {
+  display: flex;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.246);
+  padding: 7% 0;
+}
+
+.textoFicha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2% 0;
+  max-width: 48%;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2%;
+  max-width: 75%;
+}
+
+.ficha2 {
+  display: flex;
+  padding: 7% 0;
+}
+
+/*------------------FOOTER-----------------------------*/
+
+footer {
+  background-color: rgb(37, 37, 37);
+  padding: 3%;
+  padding-bottom: 10%;
+}
+
+/*--------------------BOTONES------------------------------*/
+
+.noVisible {
+  display: none;
+}
+
+.boton1Visible {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.boton2Visible {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.boton2NoVisible {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.boton1NoVisible {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.boton2NoVisible {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.boton1signVisible {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  right: 15px;
+}
+
+.boton2signVisible {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.boton1signNoVisible {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.boton2signNoVisible {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.arriba {
+  position: fixed;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  background-color: white;
+  width: 100%;
+  padding: 3%;
+  font-weight: 600;
+  height: 100vh;
+}
+
+.singBlue {
+  color: #1976D2;
+}
+#cerrar2{
+  opacity: 0;
+}
+@media(min-width: 1000px) {
+  .container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  nav {
+    background-color: rgb(37, 37, 37);
+    padding: 0;
+  }
+  .boton1Visible {
+    display: none;
+    background-color: transparent;
+    border: none;
+  }
+  .boton2Visible {
+    display: none;
+    background-color: transparent;
+    border: none;
+  }
+  .sign {
+    display: inline;
+    color: #5dbafc;
+  }
+  .portada {
+    background-image: url('/img/Imagen_Desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%;
+    margin-top: 0;
+  }
+  .textoPortada {
+    width: 25%;
+    padding: 3.6%;
+    margin-left: 5%;
+  }
+  .textoPortada h1 {
+    font-size: 2.5rem;
+  }
+  .textoPortada h2 {
+    font-size: 1.8rem;
+  }
+  #products {
+    padding: 3% 8% 1.5% 8%;
+    font-size: 2rem;
+    margin-bottom: auto;
+  }
+  section {
+    display: flex;
+    padding: 0 8%;
+    width: 100%;
+    margin-bottom: auto;
+    justify-content: start;
+  }
+  .ficha1 img, .ficha2 img {
+    max-width: 45%;
+  }
+  .ficha1, .ficha2 {
+    border: 1px solid rgba(128, 128, 128, 0.424);
+    border-radius: 5px;
+    width: 32%;
+    padding: 2%;
+    margin-right: 2%;
+  }
+  .textoFicha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .textoFicha h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .textoFicha p, .textoFicha h4 {
+    font-size: 1.2rem;
+  }
+  #cerrar2{
+    opacity: 1;
+  }
+  footer {
+    padding: 2% 8% 2% 8%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 80%;
+    margin: auto;
+  }
 }

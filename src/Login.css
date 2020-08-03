@@ -1,0 +1,45 @@
+.cajaLogin{
+    width: 95%;
+    margin: 4% auto;
+}
+.back{
+    margin-bottom: 6%;
+    
+}
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+}
+.fa-arrow-left{
+    margin-right: 4%;
+}
+.formLogin label{
+    margin: 3% 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.formLogin input{
+    padding: 3%;
+}
+.botonSign{
+    color: white;
+    border-radius: 5px;
+    background-color: #1976D2;
+    border: none;
+    padding: 3%;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Heebo', sans-serif;
+    margin-top: 5%;
+}
+.botonSign:hover{
+    background-color: #59b3f8;
+}
+@media(min-width: 1000px){
+    .cajaLogin{
+        width: 30%;
+        margin: 5% auto;
+    }
+}
